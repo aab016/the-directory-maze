@@ -36,3 +36,6 @@ echo "Tesoro #5" > treasure.txt
 echo $dst >> treasure.txt
 printf $dst | sha1sum - | awk '{print $1}' >> treasure.txt
 cp treasure.txt ${dst}
+
+echo 'Questo non è uno dei tesori che vai cercando!!!' > treasure.txt
+echo 'Parti dalla cartella /start!' >> treasure.txt
