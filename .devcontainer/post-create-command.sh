@@ -1,6 +1,6 @@
 #!/bin/bash
 
-HOW_MANY=30
+HOW_MANY=60
 
 sudo rm -rf /start
 sudo mkdir -p /start
@@ -33,6 +33,36 @@ cp treasure.txt ${dst}
 
 dst=`find /start -name 10`
 echo "Tesoro #5" > treasure.txt
+echo $dst >> treasure.txt
+printf $dst | sha1sum - | awk '{print $1}' >> treasure.txt
+cp treasure.txt ${dst}
+
+dst=`find /start -name 49`
+echo "Tesoro #6" > treasure.txt
+echo $dst >> treasure.txt
+printf $dst | sha1sum - | awk '{print $1}' >> treasure.txt
+cp treasure.txt ${dst}
+
+dst=`find /start -name 39`
+echo "Tesoro #7" > treasure.txt
+echo $dst >> treasure.txt
+printf $dst | sha1sum - | awk '{print $1}' >> treasure.txt
+cp treasure.txt ${dst}
+
+dst=`find /start -name 52`
+echo "Tesoro #8" > treasure.txt
+echo $dst >> treasure.txt
+printf $dst | sha1sum - | awk '{print $1}' >> treasure.txt
+cp treasure.txt ${dst}
+
+dst=`find /start -name 27`
+echo "Tesoro #9" > treasure.txt
+echo $dst >> treasure.txt
+printf $dst | sha1sum - | awk '{print $1}' >> treasure.txt
+cp treasure.txt ${dst}
+
+dst=`find /start -name 59`
+echo "Tesoro #10" > treasure.txt
 echo $dst >> treasure.txt
 printf $dst | sha1sum - | awk '{print $1}' >> treasure.txt
 cp treasure.txt ${dst}
